@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./styles.css";
+import { Header } from "./Header";
 
 const emojiDictionary = {
   "": "",
@@ -40,30 +41,33 @@ export default function App() {
 
   return (
     <div className="App">
-      <h1 className="hero-head">Emoji Interpreter</h1>
-      <div className="emoji-interpreter">
-        <p>Enter emoji to know the meaning!</p>
-        <input onChange={emojiInputHandler} className="emoji-input" />
-        <div>
-          <h2 className="emoji-meaning">{emojiMeaning}</h2>
+      <Header></Header>
+      <div className="container">
+        <h1 className="hero-head">Emoji Interpreter</h1>
+        <div className="emoji-interpreter">
+          <p>Enter emoji to know the meaning!</p>
+          <input onChange={emojiInputHandler} className="emoji-input" />
+          <div>
+            <h2 className="emoji-meaning">{emojiMeaning}</h2>
+          </div>
         </div>
-      </div>
-      <div className="known-emojis">
-        <h2>Emojis We Know</h2>
-        <div className="known-emojis-list">
-          {emojiArray.map((emoji) => {
-            return (
-              emoji !== "" && (
-                <span
-                  onClick={() => handleEmojiClick(emoji)}
-                  className="emojis"
-                  key={emoji}
-                >
-                  {emoji}
-                </span>
-              )
-            );
-          })}
+        <div className="known-emojis">
+          <h2>Emojis We Know</h2>
+          <div className="known-emojis-list">
+            {emojiArray.map((emoji) => {
+              return (
+                emoji !== "" && (
+                  <span
+                    onClick={() => handleEmojiClick(emoji)}
+                    className="emojis"
+                    key={emoji}
+                  >
+                    {emoji}
+                  </span>
+                )
+              );
+            })}
+          </div>
         </div>
       </div>
     </div>
