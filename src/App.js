@@ -48,19 +48,23 @@ export default function App() {
           <h2 className="emoji-meaning">{emojiMeaning}</h2>
         </div>
       </div>
-      <div class="known-emojis">
+      <div className="known-emojis">
         <h2>Emojis We Know</h2>
-        {emojiArray.map((emoji) => {
-          return (
-            <span
-              onClick={() => handleEmojiClick(emoji)}
-              className="emojis"
-              key={emoji}
-            >
-              {emoji}
-            </span>
-          );
-        })}
+        <div className="known-emojis-list">
+          {emojiArray.map((emoji) => {
+            return (
+              emoji !== "" && (
+                <span
+                  onClick={() => handleEmojiClick(emoji)}
+                  className="emojis"
+                  key={emoji}
+                >
+                  {emoji}
+                </span>
+              )
+            );
+          })}
+        </div>
       </div>
     </div>
   );
