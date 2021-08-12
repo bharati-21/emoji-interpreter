@@ -129,6 +129,15 @@
   width: 100%;
 }
 
+.emoji-wrapper {
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.emoji-wrapper:hover {
+  transform: scale(1.2);
+}
+
 .known-emojis span.emojis {
   margin: 1rem;
   line-height: 2;

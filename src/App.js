@@ -57,13 +57,15 @@ export default function App() {
             {emojiArray.map((emoji) => {
               return (
                 emoji !== "" && (
-                  <span
-                    onClick={() => handleEmojiClick(emoji)}
-                    className="emojis"
-                    key={emoji}
-                  >
-                    {emoji}
-                  </span>
+                  <div className="emoji-wrapper">
+                    <span
+                      onClick={() => handleEmojiClick(emoji)}
+                      className="emojis"
+                      key={emoji}
+                    >
+                      {emoji}
+                    </span>
+                  </div>
                 )
               );
             })}
