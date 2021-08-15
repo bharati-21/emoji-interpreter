@@ -1,7 +1,7 @@
 # EMOJI INTERPRETER
 An emoji interpreter that tells the name of the emoji when user clicks the emoji, or when user inputs the emoji in the input box using known emojis from the database.
 
- ### This application translates English to minion lamguage using a translator API.
+ ### This application tells the name of an emoji clicked or entered by the user.
 Live demo of the application: https://bharati-emoji-interpreter.netlify.app/
 <hr />
 
